@@ -9,7 +9,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'local_sectionicons';
-$plugin->version = 2026091600;
+$plugin->version = 2026100400;
 $plugin->requires = 2024100700; // Moodle 4.5.
-$plugin->maturity = MATURITY_BETA;
-$plugin->release = '0.4.0-beta';
+$plugin->maturity = MATURITY_STABLE;
+$plugin->release = '1.0.0';
