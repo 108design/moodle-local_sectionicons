@@ -1,0 +1,318 @@
+/* Course-index output: rely only on Moodle's semantic data attributes and plugin-owned classes. */
+#courseindex [data-for="section_item"],
+[data-region="courseindex"] [data-for="section_item"] {
+    align-items: center;
+}
+
+#courseindex [data-for="section_item"] > .local-sectionicons-holder,
+[data-region="courseindex"] [data-for="section_item"] > .local-sectionicons-holder {
+    align-items: center;
+    align-self: center;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    color: inherit;
+    display: inline-flex;
+    flex: 0 0 auto;
+    min-height: 1.5rem;
+    min-width: 1.25rem;
+    justify-content: center;
+    margin: 0 !important;
+    margin-inline-end: .65rem !important;
+    order: 0;
+    padding: 0;
+    width: auto;
+}
+
+#courseindex [data-for="section_item"] > [data-for="section_title"],
+[data-region="courseindex"] [data-for="section_item"] > [data-for="section_title"] {
+    min-width: 0;
+    order: 1;
+}
+
+#courseindex [data-for="section_item"] > .current-badge,
+[data-region="courseindex"] [data-for="section_item"] > .current-badge {
+    order: 2;
+}
+
+#courseindex [data-for="section_item"] > .courseindex-locked,
+[data-region="courseindex"] [data-for="section_item"] > .courseindex-locked {
+    order: 3;
+}
+
+#courseindex [data-for="section_item"] > .dragicon,
+[data-region="courseindex"] [data-for="section_item"] > .dragicon {
+    margin-inline-start: .25rem !important;
+    order: 98;
+}
+
+#courseindex .courseindex-section-title .courseindex-chevron,
+[data-region="courseindex"] .courseindex-section-title .courseindex-chevron {
+    margin-inline-start: auto !important;
+    margin-inline-end: 0 !important;
+    order: 99 !important;
+}
+
+#courseindex .local-sectionicons-image,
+[data-region="courseindex"] .local-sectionicons-image,
+.local-sectionicons-content-holder .local-sectionicons-image,
+.local-sectionicons-manager .local-sectionicons-image {
+    border: 0 !important;
+    display: block;
+    height: var(--local-sectionicons-size, 1.25rem) !important;
+    margin: 0 !important;
+    max-height: var(--local-sectionicons-size, 1.25rem) !important;
+    max-width: var(--local-sectionicons-size, 1.25rem) !important;
+    object-fit: contain;
+    padding: 0 !important;
+    width: var(--local-sectionicons-size, 1.25rem) !important;
+}
+
+.local-sectionicons-font {
+    color: currentColor;
+    display: inline-block !important;
+    font-size: var(--local-sectionicons-size, 1.25rem) !important;
+    line-height: 1;
+    margin: 0 !important;
+    visibility: visible !important;
+}
+
+.local-sectionicons-size-small { --local-sectionicons-size: .75rem; }
+.local-sectionicons-size-normal { --local-sectionicons-size: 1rem; }
+.local-sectionicons-size-large { --local-sectionicons-size: 1.25rem; }
+.local-sectionicons-size-max { --local-sectionicons-size: 1.5rem; }
+
+/* Main course content: use the heading's own type scale rather than fixed Course Index dimensions. */
+.local-sectionicons-content-title > .local-sectionicons-content-holder {
+    align-items: center;
+    align-self: center;
+    color: inherit;
+    display: inline-flex;
+    flex: 0 0 auto;
+    justify-content: center;
+    line-height: 1;
+    margin: 0 !important;
+    margin-inline-end: .5em !important;
+}
+
+/*
+ * Flexible Sections places an interactive collapse control immediately before the heading. Its standard `me-1`
+ * spacing is visually too narrow once this plugin adds a leading visual inside that heading. Scope the extra gap to
+ * the interactive variant so the already balanced linked/non-collapsible section heading remains unchanged.
+ */
+.course-section-header .icons-collapse-expand + .local-sectionicons-content-title {
+    margin-inline-start: .5rem;
+}
+
+/* Moodle's generic `.icon` dimensions remain 16px; match the flex box to the selected content-heading glyph size. */
+.local-sectionicons-content-holder > .local-sectionicons-font {
+    align-items: center;
+    display: inline-flex;
+    height: 1em;
+    justify-content: center;
+    transform: translateY(-.06em);
+    vertical-align: middle;
+    width: 1em;
+}
+
+.local-sectionicons-content-edit {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    border-radius: .25rem;
+    box-shadow: none;
+    color: inherit;
+    cursor: pointer;
+    font: inherit;
+    padding: 0;
+}
+
+.local-sectionicons-content-edit:hover,
+.local-sectionicons-content-edit:focus-visible {
+    background: rgba(127, 127, 127, .12);
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+}
+
+.local-sectionicons-content-holder .local-sectionicons-size-small {
+    --local-sectionicons-size: .75em;
+}
+
+.local-sectionicons-content-holder .local-sectionicons-size-normal {
+    --local-sectionicons-size: 1em;
+}
+
+.local-sectionicons-content-holder .local-sectionicons-size-large {
+    --local-sectionicons-size: 1.2em;
+}
+
+.local-sectionicons-content-holder .local-sectionicons-size-max {
+    --local-sectionicons-size: 1.4em;
+}
+
+#courseindex .local-sectionicons-inline-edit,
+[data-region="courseindex"] .local-sectionicons-inline-edit {
+    border-radius: .25rem;
+    cursor: pointer;
+}
+
+#courseindex .local-sectionicons-inline-edit:hover,
+#courseindex .local-sectionicons-inline-edit:focus-visible,
+[data-region="courseindex"] .local-sectionicons-inline-edit:hover,
+[data-region="courseindex"] .local-sectionicons-inline-edit:focus-visible {
+    background: rgba(127, 127, 127, .12);
+    outline: 2px solid currentColor;
+    outline-offset: 1px;
+}
+
+.local-sectionicons-placeholder {
+    color: inherit !important;
+    display: inline-block !important;
+    font-size: 1rem !important;
+    opacity: .72 !important;
+    visibility: visible !important;
+}
+
+/* Hierarchical course management page. */
+.local-sectionicons-manager {
+    margin-inline: auto;
+    max-width: 100%;
+    min-width: min(100%, 30rem);
+    width: fit-content;
+}
+
+.local-sectionicons-display-setting {
+    margin-block: 1rem 1.25rem;
+}
+
+.local-sectionicons-section-list {
+    border: 1px solid var(--bs-border-color, #dee2e6);
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.local-sectionicons-section-row + .local-sectionicons-section-row {
+    border-top: 1px solid var(--bs-border-color, #dee2e6);
+}
+
+.local-sectionicons-section-button {
+    align-items: center;
+    background: var(--bs-body-bg, #fff);
+    border: 0;
+    border-radius: 0;
+    color: var(--bs-body-color, #212529);
+    display: flex;
+    gap: 0 !important;
+    justify-content: flex-start !important;
+    min-height: 3rem;
+    text-align: start !important;
+    width: 100%;
+}
+
+/* Themes frequently restate .btn padding, sometimes with !important. Keep hierarchy indentation authoritative. */
+#page .local-sectionicons-manager .local-sectionicons-section-row > .local-sectionicons-section-button {
+    padding-block: .5rem !important;
+    padding-inline-end: .75rem !important;
+    padding-inline-start: .75rem !important;
+}
+
+.local-sectionicons-section-content {
+    align-items: center;
+    display: inline-flex;
+    min-width: 0;
+}
+
+.local-sectionicons-section-button:hover,
+.local-sectionicons-section-button:focus-visible {
+    background: var(--bs-tertiary-bg, #f4f5f6);
+    color: var(--bs-body-color, #212529);
+}
+
+.local-sectionicons-section-row.is-hidden .local-sectionicons-section-name {
+    opacity: .65;
+}
+
+.local-sectionicons-manager-preview {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    min-height: 1.5rem;
+    min-width: 1.5rem;
+    justify-content: center;
+    margin-inline-end: .65rem !important;
+    width: auto;
+}
+
+.local-sectionicons-section-name {
+    font-weight: 600;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.local-sectionicons-hidden-badge {
+    font-size: .7rem;
+}
+
+.local-sectionicons-row-edit {
+    margin-inline-start: auto;
+}
+
+/* Shared visual picker. */
+.local-sectionicons-choices {
+    display: grid;
+    gap: .35rem;
+    grid-template-columns: repeat(auto-fill, minmax(2.65rem, 1fr));
+    max-height: min(48vh, 26rem);
+    overflow: auto;
+    padding: .15rem;
+}
+
+.local-sectionicons-choice {
+    align-items: center;
+    background: var(--bs-body-bg, #fff);
+    border: 1px solid var(--bs-border-color, #dee2e6);
+    color: var(--bs-body-color, #212529);
+    display: flex;
+    justify-content: center;
+    min-height: 2.5rem;
+    overflow: hidden;
+    padding: .25rem;
+    text-align: center;
+}
+
+.local-sectionicons-choice:hover,
+.local-sectionicons-choice:focus-visible,
+.local-sectionicons-choice[aria-checked="true"] {
+    background: var(--bs-tertiary-bg, #f4f5f6);
+    border-color: currentColor;
+    color: var(--bs-primary, #0f6cbf);
+}
+
+.local-sectionicons-choice-icon {
+    flex: 0 0 1.25rem;
+    margin: 0 !important;
+    text-align: center;
+    font-size: 1.1rem;
+    width: 1.25rem;
+}
+
+.local-sectionicons-size-field {
+    align-items: center;
+    display: flex;
+    gap: .6rem;
+    margin-bottom: .65rem;
+    margin-top: .65rem;
+    flex-wrap: wrap;
+    width: fit-content;
+}
+
+.local-sectionicons-size-field > select {
+    min-width: 8rem;
+    width: auto;
+}
+
+.local-sectionicons-more {
+    margin-top: .35rem;
+}
