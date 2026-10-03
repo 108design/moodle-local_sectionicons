@@ -30,3 +30,7 @@ files are intentionally not migrated and must be configured again.
 - Only users with `local/sectionicons:manage` can edit assignments or upload images.
 - Icon files are private course-context files and require normal course access.
 - Deleting a section or course removes its assignments; course backup/restore remaps them to restored section IDs.
+
+## License
+
+This is a 108design source-available commercial software license, not an open-source license. See [LICENSE.md](https://github.com/108design/moodle-local_sectionicons/blob/main/LICENSE.md) for the full terms.
