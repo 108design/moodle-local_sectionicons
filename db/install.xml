@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<XMLDB PATH="local/sectionicons/db" VERSION="2026091600" COMMENT="XMLDB file for Section Icons">
+<XMLDB PATH="local/sectionicons/db" VERSION="2026100401" COMMENT="XMLDB file for Section Icons">
   <TABLES>
-    <TABLE NAME="local_si_icon" COMMENT="Course section icon assignments">
+    <TABLE NAME="local_sectionicons_icon" COMMENT="Course section icon assignments">
       <FIELDS>
         <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
         <FIELD NAME="courseid" TYPE="int" LENGTH="10" NOTNULL="true"/>
@@ -22,7 +22,7 @@
         <INDEX NAME="section_ix" UNIQUE="false" FIELDS="sectionid"/>
       </INDEXES>
     </TABLE>
-    <TABLE NAME="local_si_course" COMMENT="Course-level Section Icons display preferences">
+    <TABLE NAME="local_sectionicons_course" COMMENT="Course-level Section Icons display preferences">
       <FIELDS>
         <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
         <FIELD NAME="courseid" TYPE="int" LENGTH="10" NOTNULL="true"/>

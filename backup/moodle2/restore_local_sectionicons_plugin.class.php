@@ -56,15 +56,15 @@ class restore_local_sectionicons_plugin extends restore_local_plugin {
             $size = \local_sectionicons\local\repository::DEFAULT_SIZE;
         }
         $now = time();
-        $record = $DB->get_record('local_si_icon', ['courseid' => $courseid, 'sectionid' => $sectionid]);
+        $record = $DB->get_record('local_sectionicons_icon', ['courseid' => $courseid, 'sectionid' => $sectionid]);
         if ($record) {
             $record->icon = $icon;
             $record->size = $size;
             $record->revision = max(1, (int) $record->revision + 1);
             $record->timemodified = $now;
-            $DB->update_record('local_si_icon', $record);
+            $DB->update_record('local_sectionicons_icon', $record);
         } else {
-            $DB->insert_record('local_si_icon', (object) [
+            $DB->insert_record('local_sectionicons_icon', (object) [
                 'courseid' => $courseid,
                 'sectionid' => $sectionid,
                 'icon' => $icon,

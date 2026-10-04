@@ -10,7 +10,7 @@ class backup_local_sectionicons_plugin extends backup_local_plugin {
         $plugin->add_child($wrapper);
         $settings = new backup_nested_element('sectioniconsettings', ['id'], ['showcontent']);
         $wrapper->add_child($settings);
-        $settings->set_source_table('local_si_course', ['courseid' => backup::VAR_COURSEID]);
+        $settings->set_source_table('local_sectionicons_course', ['courseid' => backup::VAR_COURSEID]);
         return $plugin;
     }
 
@@ -22,7 +22,7 @@ class backup_local_sectionicons_plugin extends backup_local_plugin {
             'sectionid', 'icon', 'size', 'revision', 'timecreated', 'timemodified',
         ]);
         $wrapper->add_child($icon);
-        $icon->set_source_table('local_si_icon', ['sectionid' => backup::VAR_SECTIONID]);
+        $icon->set_source_table('local_sectionicons_icon', ['sectionid' => backup::VAR_SECTIONID]);
         $icon->annotate_files('local_sectionicons', 'sectionicon', 'sectionid');
         return $plugin;
     }

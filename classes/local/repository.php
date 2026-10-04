@@ -7,8 +7,8 @@ use moodle_url;
 
 /** Persistence and File API boundary for section icons. */
 final class repository {
-    public const TABLE = 'local_si_icon';
-    public const COURSE_TABLE = 'local_si_course';
+    public const TABLE = 'local_sectionicons_icon';
+    public const COURSE_TABLE = 'local_sectionicons_course';
     public const FILEAREA = 'sectionicon';
     public const IMAGE_VALUE = 'image';
     public const DEFAULT_SIZE = 'normal';
