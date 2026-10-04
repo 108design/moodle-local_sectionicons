@@ -32,6 +32,38 @@ Course editors with `local/sectionicons:manage` can change icons and upload imag
 Uploaded files require access to the course. Course backup and restore include
 icon assignments, uploaded images and the course's heading-display setting.
 
+## Screenshots
+
+<details>
+<summary>View screenshots (4)</summary>
+
+Click a preview to open the full-size screenshot.
+
+<table>
+<tr>
+<td align="center" width="50%" valign="middle">
+<a href="https://raw.githubusercontent.com/108design/moodle-local_sectionicons/main/docs/screenshots/si-general-icon-con.jpg"><img src="https://raw.githubusercontent.com/108design/moodle-local_sectionicons/main/docs/screenshots/si-general-icon-con.jpg" width="290" height="160" alt="Icons in the Course Index and section headings"></a><br>
+<sub>Icons in the Course Index and section headings</sub>
+</td>
+<td align="center" width="50%" valign="middle">
+<a href="https://raw.githubusercontent.com/108design/moodle-local_sectionicons/main/docs/screenshots/si-picker.jpg"><img src="https://raw.githubusercontent.com/108design/moodle-local_sectionicons/main/docs/screenshots/si-picker.jpg" width="103" height="160" alt="Search for icons or upload an image"></a><br>
+<sub>Search for icons or upload an image</sub>
+</td>
+</tr>
+<tr>
+<td align="center" width="50%" valign="middle">
+<a href="https://raw.githubusercontent.com/108design/moodle-local_sectionicons/main/docs/screenshots/si-editor.jpg"><img src="https://raw.githubusercontent.com/108design/moodle-local_sectionicons/main/docs/screenshots/si-editor.jpg" width="300" height="120" alt="Manage icons and course-content display"></a><br>
+<sub>Manage icons and course-content display</sub>
+</td>
+<td align="center" width="50%" valign="middle">
+<a href="https://raw.githubusercontent.com/108design/moodle-local_sectionicons/main/docs/screenshots/si-editing-on-action-button.jpg"><img src="https://raw.githubusercontent.com/108design/moodle-local_sectionicons/main/docs/screenshots/si-editing-on-action-button.jpg" width="298" height="160" alt="Open the inline picker while editing"></a><br>
+<sub>Open the inline picker while editing</sub>
+</td>
+</tr>
+</table>
+
+</details>
+
 ## License
 
 This is a 108design source-available commercial software license, not an open-source license. See [LICENSE.md](https://github.com/108design/moodle-local_sectionicons/blob/main/LICENSE.md) for the full terms.

@@ -30,7 +30,7 @@ installations are determined by the applicable entitlement or written agreement.
 
 ## 3. Beta and pre-release versions
 
-This distribution is an early beta. Beta and other pre-release versions may be
+Beta and other pre-release versions may be
 incomplete, experimental, unstable or unsupported. Features, data formats,
 interfaces and entitlement rules may change or be removed before a stable
 release. No commitment is made that a particular feature will remain available.
