@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/108design/moodle-local_sectionicons/main/docs/branding/logo.svg" alt="Section Icons logo" width="443" height="443">
+</p>
+
 # 108design Section Icons
 
 Make course sections easier to recognise with Moodle icons, Font Awesome icons or
