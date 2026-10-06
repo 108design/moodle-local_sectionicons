@@ -62,8 +62,9 @@ final class section_tree {
         return $result;
     }
 
+    /** Accept both the legacy 4.5/5.0 and namespaced 5.1+ section-info objects. */
     private static function parent_id(
-        \core_course\section_info $section,
+        object $section,
         \core_courseformat\base $format,
         array $sectionidsbynumber
     ): int {

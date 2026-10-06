@@ -16,6 +16,10 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+defaults:
+  run:
+    shell: bash
+
 jobs:
   test:
     name: Moodle ${{ matrix.lane.moodle }} / PHP ${{ matrix.lane.php }} / ${{ matrix.database }}
@@ -26,6 +30,8 @@ jobs:
       matrix:
         lane:
           - {moodle: '4.5', branch: MOODLE_405_STABLE, php: '8.1', flexbranch: MOODLE_401_STABLE, flexcommit: bef5a0f5cc18ea6ad2f1aef6d7297c4a308a6183}
+          - {moodle: '5.0', branch: MOODLE_500_STABLE, php: '8.2', flexbranch: MOODLE_500_STABLE, flexcommit: 2f1cfc2d5be41ace608c8131bf3b8d614a385ebd}
+          - {moodle: '5.1', branch: MOODLE_501_STABLE, php: '8.2', flexbranch: MOODLE_500_STABLE, flexcommit: 2f1cfc2d5be41ace608c8131bf3b8d614a385ebd}
           - {moodle: '5.2', branch: MOODLE_502_STABLE, php: '8.3', flexbranch: MOODLE_500_STABLE, flexcommit: 2f1cfc2d5be41ace608c8131bf3b8d614a385ebd}
         database: [mariadb, pgsql]
     services:
