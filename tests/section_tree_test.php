@@ -7,6 +7,9 @@ use local_sectionicons\local\section_tree;
 final class section_tree_test extends \advanced_testcase {
     public function test_core_subsection_is_nested_below_its_parent(): void {
         $this->resetAfterTest(true);
+        // Moodle 4.5 ships subsections disabled; exercise an enabled native delegate.
+        $manager = \core_plugin_manager::resolve_plugininfo_class('mod');
+        $manager::enable_plugin('subsection', 1);
 
         $course = $this->getDataGenerator()->create_course(['format' => 'topics', 'numsections' => 2]);
         $module = $this->getDataGenerator()->create_module('subsection', (object) [
