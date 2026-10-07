@@ -8,12 +8,23 @@ on:
     branches: [main]
     paths-ignore: [README.md, 'docs/**']
   workflow_dispatch:
+    inputs:
+      moodle:
+        description: Moodle branch for a specifically justified extra check
+        type: choice
+        default: '5.2'
+        options: ['5.2', '4.5', '5.0', '5.1']
+      database:
+        description: Database for the selected check
+        type: choice
+        default: mariadb
+        options: [mariadb, pgsql]
 
 permissions:
   contents: read
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
+  group: ${{ github.workflow }}-${{ github.ref }}-${{ inputs.moodle || '5.2' }}-${{ inputs.database || 'mariadb' }}
   cancel-in-progress: true
 
 defaults:
@@ -28,12 +39,15 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
+        # Push/PR: one reference lane. Manual runs select one justified combination.
         lane:
-          - {moodle: '4.5', branch: MOODLE_405_STABLE, php: '8.1', flexbranch: MOODLE_401_STABLE, flexcommit: bef5a0f5cc18ea6ad2f1aef6d7297c4a308a6183}
-          - {moodle: '5.0', branch: MOODLE_500_STABLE, php: '8.2', flexbranch: MOODLE_500_STABLE, flexcommit: 2f1cfc2d5be41ace608c8131bf3b8d614a385ebd}
-          - {moodle: '5.1', branch: MOODLE_501_STABLE, php: '8.2', flexbranch: MOODLE_500_STABLE, flexcommit: 2f1cfc2d5be41ace608c8131bf3b8d614a385ebd}
-          - {moodle: '5.2', branch: MOODLE_502_STABLE, php: '8.3', flexbranch: MOODLE_500_STABLE, flexcommit: 2f1cfc2d5be41ace608c8131bf3b8d614a385ebd}
-        database: [mariadb, pgsql]
+          - moodle: ${{ inputs.moodle || '5.2' }}
+            branch: ${{ inputs.moodle == '4.5' && 'MOODLE_405_STABLE' || inputs.moodle == '5.0' && 'MOODLE_500_STABLE' || inputs.moodle == '5.1' && 'MOODLE_501_STABLE' || 'MOODLE_502_STABLE' }}
+            php: ${{ inputs.moodle == '4.5' && '8.1' || (inputs.moodle == '5.0' || inputs.moodle == '5.1') && '8.2' || '8.3' }}
+            flexbranch: ${{ inputs.moodle == '4.5' && 'MOODLE_401_STABLE' || 'MOODLE_500_STABLE' }}
+            flexcommit: ${{ inputs.moodle == '4.5' && 'bef5a0f5cc18ea6ad2f1aef6d7297c4a308a6183' || '2f1cfc2d5be41ace608c8131bf3b8d614a385ebd' }}
+        database:
+          - ${{ inputs.database || 'mariadb' }}
     services:
       postgres:
         image: ${{ matrix.database == 'pgsql' && 'postgres:16' || '' }}
