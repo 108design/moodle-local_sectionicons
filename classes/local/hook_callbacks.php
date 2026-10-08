@@ -30,8 +30,8 @@ final class hook_callbacks {
         if (!$hasmanagecapability && !$repository->records_for_course($courseid)) {
             return;
         }
-        $PAGE->requires->js_call_amd('local_sectionicons/sectionicons', 'init', [
-            client_config::get($courseid, $hasmanagecapability, false, $inlineediting),
-        ]);
+        $PAGE->requires->data_for_js('M.local_sectionicons_config',
+            client_config::get($courseid, $hasmanagecapability, false, $inlineediting));
+        $PAGE->requires->js_call_amd('local_sectionicons/sectionicons', 'init');
     }
 }

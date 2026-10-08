@@ -474,6 +474,10 @@ class SectionIcons {
 }
 
 export const init = config => {
+    config = config || M.local_sectionicons_config;
+    if (!config) {
+        return;
+    }
     if (instance) {
         instance.merge(config);
     } else {

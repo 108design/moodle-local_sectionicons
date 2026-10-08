@@ -20,9 +20,9 @@ $repository = new \local_sectionicons\local\repository();
 $assignments = $repository->descriptors_for_course($courseid);
 $showcontent = $repository->show_in_content($courseid);
 $sections = \local_sectionicons\local\section_tree::for_course($course);
-$PAGE->requires->js_call_amd('local_sectionicons/sectionicons', 'init', [
-    \local_sectionicons\local\client_config::get($courseid, true, true),
-]);
+$PAGE->requires->data_for_js('M.local_sectionicons_config',
+    \local_sectionicons\local\client_config::get($courseid, true, true));
+$PAGE->requires->js_call_amd('local_sectionicons/sectionicons', 'init');
 
 echo $OUTPUT->header();
 echo $OUTPUT->heading(get_string('manageicons', 'local_sectionicons'));
