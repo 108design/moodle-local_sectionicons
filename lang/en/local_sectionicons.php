@@ -1,4 +1,16 @@
 <?php
+/**
+ * This file is part of a 108design source-available software product.
+ *
+ * Use and modification are permitted only under the Software License included
+ * with this distribution. See LICENSE.md for the full terms.
+ *
+ * File documentation for lang/en/local_sectionicons.php.
+ *
+ * @package   local_sectionicons
+ * @copyright 2026 Andreas Giesen <andreas@108design.com>
+ * @license   See LICENSE.md for the full terms.
+ */
 defined('MOODLE_INTERNAL') || die();
 
 $string['pluginname'] = 'Section Icons';
@@ -62,3 +74,5 @@ $string['iconinfo'] = 'Information';
 $string['iconquestions'] = 'Question';
 $string['iconrss'] = 'RSS';
 $string['iconcalendar'] = 'Calendar';
+
+$string['sectionicons:manage'] = 'Manage course section icons';

@@ -1,4 +1,16 @@
 <?php
+/**
+ * This file is part of a 108design source-available software product.
+ *
+ * Use and modification are permitted only under the Software License included
+ * with this distribution. See LICENSE.md for the full terms.
+ *
+ * File documentation for tests/repository_test.php.
+ *
+ * @package   local_sectionicons
+ * @copyright 2026 Andreas Giesen <andreas@108design.com>
+ * @license   See LICENSE.md for the full terms.
+ */
 namespace local_sectionicons;
 
 use advanced_testcase;

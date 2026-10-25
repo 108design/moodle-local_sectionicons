@@ -1,3 +1,10 @@
+/**
+ * File documentation for amd/src/sectionicons.js.
+ *
+ * @package   local_sectionicons
+ * @copyright 2026 Andreas Giesen <andreas@108design.com>
+ * @license   See LICENSE.md for the full terms.
+ */
 // This file is part of a 108design source-available software product.
 
 import Ajax from 'core/ajax';

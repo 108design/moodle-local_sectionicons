@@ -1,4 +1,11 @@
 <?php
+/**
+ * File documentation for db/upgrade.php.
+ *
+ * @package   local_sectionicons
+ * @copyright 2026 Andreas Giesen <andreas@108design.com>
+ * @license   See LICENSE.md for the full terms.
+ */
 // This file is part of a 108design source-available software product.
 //
 // Copyright (C) 2026 Andreas Giesen <andreas@108design.com>

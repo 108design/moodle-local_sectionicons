@@ -1,4 +1,11 @@
 <?php
+/**
+ * File documentation for version.php.
+ *
+ * @package   local_sectionicons
+ * @copyright 2026 Andreas Giesen <andreas@108design.com>
+ * @license   See LICENSE.md for the full terms.
+ */
 // This file is part of a 108design source-available software product.
 //
 // Copyright (C) 2026 Andreas Giesen <andreas@108design.com>
@@ -9,7 +16,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'local_sectionicons';
-$plugin->version = 2026101615;
+$plugin->version = 2026102500;
 $plugin->requires = 2024100700; // Moodle 4.5.
 $plugin->maturity = MATURITY_STABLE;
-$plugin->release = '1.1.0';
+$plugin->release = '1.2.0';
