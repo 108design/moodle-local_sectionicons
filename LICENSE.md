@@ -68,6 +68,57 @@ rights in the Author's names, logos or trademarks. The Licensee retains rights i
 its own data and in independently created material that does not contain or
 derive from the Software.
 
+## 6a. Limited permission for Moodle Marketplace
+
+This section applies only to versions of the Software and related listing
+materials submitted to Moodle Marketplace by the Author or with the Author's
+authorisation. "Moodle" means Moodle Pty Ltd, the operator identified in the
+Moodle Marketplace Provider Terms of Use.
+
+To the extent that the Author owns or is authorised to grant the relevant
+rights, the Author grants Moodle a limited, worldwide, revocable, non-exclusive,
+royalty-free licence to:
+
+(a) host, store, reproduce, display, distribute, translate, adapt and create
+derivative works of the submitted Software and its listing materials, including
+language strings and metadata, as necessary for the operation of Moodle
+Marketplace;
+
+(b) use the submitted Software's name, descriptions, logos and related media for
+Moodle Marketplace display, promotional activity, search results and
+recommendation features; and
+
+(c) install, run, test, review, evaluate and analyse the submitted Software for
+approval, compliance checks, security assessment and technical verification.
+
+These permissions exist solely for Moodle Marketplace operation and promotional
+purposes. Moodle's contractors and authorised service providers may exercise
+them on Moodle's behalf for those same purposes, as permitted by the Provider
+Terms separately accepted by the Author.
+
+These permissions take precedence over conflicting restrictions elsewhere in
+this licence, including restrictions concerning Internal Use, modification,
+distribution, disclosure to contractors and use of names, logos or trademarks,
+but only to the extent required to exercise the permissions expressly granted
+in this section.
+
+Distribution through Moodle Marketplace does not give recipients Moodle's
+special permissions under this section. Recipients receive their rights
+directly from the Author under this licence and any applicable entitlement or
+separate agreement. This section does not authorise Moodle to relicense the
+Software for recipients or exploit it independently outside the stated
+Marketplace purposes.
+
+The exercise, duration and revocation of these permissions, and any rights that
+survive termination, are subject to the Provider Terms separately accepted by
+the Author. Termination under Section 9 does not override rights that continue
+under those Terms.
+
+This section transfers no ownership of the Author's Software or listing
+materials. It does not change the licences applicable to Third-Party Components
+or grant any person rights that the Author does not own or have authority to
+grant. All rights not expressly granted remain reserved.
+
 ## 7. Third-Party Components and Moodle
 
 The Software is designed to operate with Moodle and calls Moodle APIs. Moodle
