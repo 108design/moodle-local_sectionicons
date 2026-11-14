@@ -1,3 +1,4 @@
+// This file is part of Moodle - https://moodle.org/
 /**
  * File documentation for amd/src/sectionicons.js.
  *

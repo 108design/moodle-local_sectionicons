@@ -1,4 +1,5 @@
 <?php
+// This file is part of Moodle - https://moodle.org/
 /**
  * This file is part of a 108design source-available software product.
  *
@@ -42,7 +43,7 @@ $string['sizesmall'] = 'Klein';
 $string['sizenormal'] = 'Normal';
 $string['sizelarge'] = 'Groß';
 $string['sizemax'] = 'Maximal';
-$string['moreicons'] = 'Weitere Icons finden Sie über das Suchfeld.';
+$string['moreicons'] = 'Suche nach dem englischen Namen, etwa „cart shopping“, oder nach einer Marke wie „GitHub“.';
 $string['sectionhidden'] = 'Verborgen';
 $string['showincontent'] = 'Icons auch im Inhaltsbereich anzeigen';
 $string['showincontent_help'] = 'Zeigt zugeordnete Icons vor den entsprechenden Abschnittsüberschriften auf der Kursseite.';

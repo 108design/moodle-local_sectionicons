@@ -1,4 +1,5 @@
 <?php
+// This file is part of Moodle - https://moodle.org/
 /**
  * This file is part of a 108design source-available software product.
  *
@@ -47,7 +48,7 @@ final class icon_catalog {
         'i/calendar' => ['calendar', 'fa-calendar-days'],
     ];
 
-    /** Return picker choices, including all Font Awesome icons shipped by Boost. */
+    /** Return picker choices, including the Font Awesome icons bundled with Moodle. */
     public static function options(): array {
         global $CFG;
 
@@ -67,6 +68,7 @@ final class icon_catalog {
         }
 
         $paths = [
+            ($CFG->root ?? dirname($CFG->dirroot)) . '/lib/bundles/fontawesome/scss/_variables.scss',
             $CFG->dirroot . '/theme/boost/scss/fontawesome/_variables.scss',
             $CFG->dirroot . '/public/theme/boost/scss/fontawesome/_variables.scss',
         ];
