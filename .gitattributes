@@ -35,6 +35,7 @@
 "/classes/local/section_tree.php" -export-ignore -export-subst
 "/classes/local/svg_sanitizer.php" -export-ignore -export-subst
 "/classes/local/update_guard.php" -export-ignore -export-subst
+"/classes/local/update_notice.php" -export-ignore -export-subst
 "/classes/privacy" -export-ignore -export-subst
 "/classes/privacy/provider.php" -export-ignore -export-subst
 "/db" -export-ignore -export-subst
@@ -63,6 +64,7 @@
 "/pix/adminbrand.svg" -export-ignore -export-subst
 "/release-guard-policy.json" -export-ignore -export-subst
 "/release-manifest.json" -export-ignore -export-subst
+"/release-metadata.php" -export-ignore -export-subst
 "/release-signature.txt" -export-ignore -export-subst
 "/styles.css" -export-ignore -export-subst
 "/tests" -export-ignore -export-subst
@@ -71,4 +73,5 @@
 "/tests/section_tree_test.php" -export-ignore -export-subst
 "/tests/upgrade_test.php" -export-ignore -export-subst
 "/update-guard.php" -export-ignore -export-subst
+"/update-notice.php" -export-ignore -export-subst
 "/version.php" -export-ignore -export-subst
