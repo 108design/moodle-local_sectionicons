@@ -31,8 +31,15 @@ $callbacks[] = [
     'callback' => [\local_sectionicons\local\admin_branding::class, 'prepare'],
 ];
 
+// Native installation and updates are handled by Moodle Core.
+
+// Optional package information; Core owns preview, confirmation and installation.
 $callbacks[] = [
     'hook' => \core\hook\after_config::class,
-    'callback' => [\local_sectionicons\local\update_guard::class, 'after_config'],
-    'priority' => 1002,
+    'callback' => [\local_sectionicons\local\update_notice::class, 'after_config'],
+    'priority' => 1003,
+];
+$callbacks[] = [
+    'hook' => \core\hook\output\before_standard_top_of_body_html_generation::class,
+    'callback' => [\local_sectionicons\local\update_notice::class, 'before_body'],
 ];
